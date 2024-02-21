@@ -88,8 +88,8 @@ class __TwigTemplate_a234be26373ba87da5cf6ff234f9831c extends Template
 
         // line 7
         echo "\t<link href=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/styles/style.css"), "html", null, true);
-        echo "\" rel=\"stylesheet\"/>
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("styles/app.css"), "html", null, true);
+        echo "\" type=\"text/css\" rel=\"stylesheet\">
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -110,29 +110,17 @@ class __TwigTemplate_a234be26373ba87da5cf6ff234f9831c extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 11
-        echo "\t<style>
-\t\t.example-wrapper {
-\t\t\tmargin: 1em auto;
-\t\t\tmax-width: 800px;
-\t\t\twidth: 95%;
-\t\t\tfont: 18px / 1.5 sans-serif;
-\t\t}
-\t\t.example-wrapper code {
-\t\t\tbackground: #F5F5F5;
-\t\t\tpadding: 2px 6px;
-\t\t}
-\t</style>
-
+        echo "
 \t<header>
 \t\t<section>
 
 \t\t\t<nav class=\"navbar\">
 \t\t\t\t<a href=\"";
-        // line 28
+        // line 16
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
         echo "\">Liste des Livres</a>
 \t\t\t\t<a href=\"";
-        // line 29
+        // line 17
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_create");
         echo "\">Ajout Livre</a>
 \t\t\t</nav>
@@ -143,51 +131,55 @@ class __TwigTemplate_a234be26373ba87da5cf6ff234f9831c extends Template
 \t\t<h1>Liste des livres</h1>
 
 \t\t";
-        // line 37
+        // line 25
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["allBooks"]) || array_key_exists("allBooks", $context) ? $context["allBooks"] : (function () { throw new RuntimeError('Variable "allBooks" does not exist.', 37, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["allBooks"]) || array_key_exists("allBooks", $context) ? $context["allBooks"] : (function () { throw new RuntimeError('Variable "allBooks" does not exist.', 25, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["book"]) {
-            // line 38
+            // line 26
             echo "\t\t\t<div>
 \t\t\t\t<a href=\"";
-            // line 39
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_detail_book", ["id" => twig_get_attribute($this->env, $this->source, $context["book"], "id", [], "any", false, false, false, 39)]), "html", null, true);
+            // line 27
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_detail_book", ["id" => twig_get_attribute($this->env, $this->source, $context["book"], "id", [], "any", false, false, false, 27)]), "html", null, true);
             echo "\">
 \t\t\t\t\t<p>ISBN :
 \t\t\t\t\t\t";
-            // line 41
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["book"], "ISBN", [], "any", false, false, false, 41), "html", null, true);
+            // line 29
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["book"], "ISBN", [], "any", false, false, false, 29), "html", null, true);
             echo "</p>
 \t\t\t\t\t<p>Title :";
-            // line 42
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["book"], "Titre", [], "any", false, false, false, 42), "html", null, true);
+            // line 30
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["book"], "Titre", [], "any", false, false, false, 30), "html", null, true);
             echo "</p>
 \t\t\t\t\t<p>Resume :
 \t\t\t\t\t\t";
-            // line 44
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["book"], "Resume", [], "any", false, false, false, 44), "html", null, true);
+            // line 32
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["book"], "Resume", [], "any", false, false, false, 32), "html", null, true);
             echo "</p>
 \t\t\t\t\t<p>Description :
 \t\t\t\t\t\t";
-            // line 46
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["book"], "Description", [], "any", false, false, false, 46), "html", null, true);
+            // line 34
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["book"], "Description", [], "any", false, false, false, 34), "html", null, true);
             echo "</p>
 \t\t\t\t\t<p>Price :
 \t\t\t\t\t\t";
-            // line 48
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["book"], "Price", [], "any", false, false, false, 48), "html", null, true);
+            // line 36
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["book"], "Price", [], "any", false, false, false, 36), "html", null, true);
             echo "</p>
-\t\t\t\t</a>
-\t\t\t</div>
-\t\t\t<hr>
-\t\t";
+
+<img src=\"";
+            // line 38
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/book.jpg"), "html", null, true);
+            echo "\" alt=\"\">
+\t\t\t\t</div>
+\t\t\t\t<hr>
+\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['book'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 53
-        echo "\t</div>
-";
+        // line 42
+        echo "\t\t</div>
+\t";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -217,7 +209,7 @@ class __TwigTemplate_a234be26373ba87da5cf6ff234f9831c extends Template
      */
     public function getDebugInfo()
     {
-        return array (  189 => 53,  178 => 48,  173 => 46,  168 => 44,  163 => 42,  159 => 41,  154 => 39,  151 => 38,  147 => 37,  136 => 29,  132 => 28,  113 => 11,  103 => 10,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
+        return array (  181 => 42,  171 => 38,  166 => 36,  161 => 34,  156 => 32,  151 => 30,  147 => 29,  142 => 27,  139 => 26,  135 => 25,  124 => 17,  120 => 16,  113 => 11,  103 => 10,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -228,22 +220,10 @@ class __TwigTemplate_a234be26373ba87da5cf6ff234f9831c extends Template
 {% endblock %}
 
 {% block stylesheets %}
-\t<link href=\"{{asset('assets/styles/style.css')}}\" rel=\"stylesheet\"/>
+\t<link href=\"{{ asset('styles/app.css') }}\" type=\"text/css\" rel=\"stylesheet\">
 {% endblock %}
 
 {% block body %}
-\t<style>
-\t\t.example-wrapper {
-\t\t\tmargin: 1em auto;
-\t\t\tmax-width: 800px;
-\t\t\twidth: 95%;
-\t\t\tfont: 18px / 1.5 sans-serif;
-\t\t}
-\t\t.example-wrapper code {
-\t\t\tbackground: #F5F5F5;
-\t\t\tpadding: 2px 6px;
-\t\t}
-\t</style>
 
 \t<header>
 \t\t<section>
@@ -270,12 +250,13 @@ class __TwigTemplate_a234be26373ba87da5cf6ff234f9831c extends Template
 \t\t\t\t\t\t{{ book.Description}}</p>
 \t\t\t\t\t<p>Price :
 \t\t\t\t\t\t{{ book.Price}}</p>
-\t\t\t\t</a>
-\t\t\t</div>
-\t\t\t<hr>
-\t\t{% endfor %}
-\t</div>
-{% endblock %}
-", "home/index.html.twig", "C:\\xampp\\htdocs\\CoursSymfony\\GestionLivreSymfonyProject\\GestionLivre\\gestionLivreSymfony\\templates\\home\\index.html.twig");
+
+<img src=\"{{ asset('img/book.jpg') }}\" alt=\"\">
+\t\t\t\t</div>
+\t\t\t\t<hr>
+\t\t\t{% endfor %}
+\t\t</div>
+\t{% endblock %}
+", "home/index.html.twig", "C:\\xampp\\htdocs\\CoursSymfony\\GestionLivreSymfonyProject\\GestionLivre\\GestionLivre\\gestionLivreSymfony\\templates\\home\\index.html.twig");
     }
 }

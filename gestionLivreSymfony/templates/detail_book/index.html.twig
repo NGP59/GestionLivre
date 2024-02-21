@@ -3,6 +3,10 @@
 {% block title %}Hello DetailBookController!
 {% endblock %}
 
+{% block stylesheets %}
+	<link href="{{ asset('styles/details.css') }}" type="text/css" rel="stylesheet">
+{% endblock %}
+
 {% block body %}
 	<style>
 		.example-wrapper {
@@ -26,14 +30,23 @@
 			</nav>
 		</section>
 	</header>
-	
-	<div class="example-wrapper">
-		<h1>Details du livre
-			{{book.id}}</h1>
 
-		{{book.getISBN}}
-		{{book.Titre}}
-		{{book.Resume}}
-		{{book.Description}}
-		{{book.price}}
-	{% endblock %}
+	<h1>Details du livre
+		{{book.ISBN}}</h1>
+	<div class="flex">
+		<div class="example-wrapper">
+
+			<p class="text">ISBN :</p>
+			<p>{{book.getISBN}}</p><br>
+			<p class="text">Titre :</p>
+			<p>{{book.Titre}}</p><br>
+			<p class="text">Resumé :</p>
+			<p>{{book.Resume}}</p><br>
+			<p class="text">Description :</p>
+			<p>{{book.Description}}</p><br>
+			<p class="text">Prix :</p>
+			<p>{{book.price}}</p><br>
+		</div>
+
+	</div>
+{% endblock %}

@@ -26,6 +26,7 @@ class __TwigTemplate_435abd5666e2de3589c0291ad893caf6 extends Template
 
         $this->blocks = [
             'title' => [$this, 'block_title'],
+            'stylesheets' => [$this, 'block_stylesheets'],
             'body' => [$this, 'block_body'],
         ];
     }
@@ -65,7 +66,8 @@ class __TwigTemplate_435abd5666e2de3589c0291ad893caf6 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Ajout Livre";
+        echo "Ajout Livre
+";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -75,6 +77,29 @@ class __TwigTemplate_435abd5666e2de3589c0291ad893caf6 extends Template
     }
 
     // line 5
+    public function block_stylesheets($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
+
+        // line 6
+        echo "\t<link href=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("styles/app.css"), "html", null, true);
+        echo "\" type=\"text/css\" rel=\"stylesheet\">
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
+    // line 8
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -84,41 +109,47 @@ class __TwigTemplate_435abd5666e2de3589c0291ad893caf6 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
+        // line 9
         echo "
 
- <header>
-      <section>
-      
-        <nav class=\"navbar\">
-          <a href=\"";
-        // line 12
+\t<header>
+\t\t<section>
+\t\t\t<nav class=\"navbar\">
+\t\t\t\t<a href=\"";
+        // line 14
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
         echo "\">Liste des Livres</a>
-          <a href=\"";
-        // line 13
+\t\t\t\t<a href=\"";
+        // line 15
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_create");
         echo "\">Ajout Livre</a>
-        </nav>
-      </section>
-    </header>
+\t\t\t</nav>
+\t\t</section>
+\t</header>
 
-<div class=\"example-wrapper\">
-    <h1>Formulaire d'intégration de livre</h1>
+\t<h1>Formulaire d'intégration de livre</h1>
+\t<div
+\t\tclass=\"flex\">
 
-<fieldset>
-";
-        // line 28
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 28, $this->source); })()), 'form');
+\t\t";
+        // line 30
+        echo "\t\t<div id=\"Form\">
+\t\t\t<fieldset>
+\t\t\t\t";
+        // line 32
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 32, $this->source); })()), 'form');
         echo "
-";
-        // line 29
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 29, $this->source); })()), 'errors');
+
+\t\t\t\t\t";
+        // line 34
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 34, $this->source); })()), 'errors');
         echo "
 
-</fieldset>
-    
-";
+\t\t\t\t</fieldset>
+\t\t\t</div>
+
+
+\t\t";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -148,44 +179,51 @@ class __TwigTemplate_435abd5666e2de3589c0291ad893caf6 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  116 => 29,  112 => 28,  100 => 13,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  145 => 34,  140 => 32,  136 => 30,  124 => 15,  120 => 14,  113 => 9,  103 => 8,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Ajout Livre{% endblock %}
-
+{% block title %}Ajout Livre
+{% endblock %}
+{% block stylesheets %}
+\t<link href=\"{{ asset('styles/app.css') }}\" type=\"text/css\" rel=\"stylesheet\">
+{% endblock %}
 {% block body %}
 
 
- <header>
-      <section>
-      
-        <nav class=\"navbar\">
-          <a href=\"{{path('app_home')}}\">Liste des Livres</a>
-          <a href=\"{{path('app_create')}}\">Ajout Livre</a>
-        </nav>
-      </section>
-    </header>
+\t<header>
+\t\t<section>
+\t\t\t<nav class=\"navbar\">
+\t\t\t\t<a href=\"{{path('app_home')}}\">Liste des Livres</a>
+\t\t\t\t<a href=\"{{path('app_create')}}\">Ajout Livre</a>
+\t\t\t</nav>
+\t\t</section>
+\t</header>
 
-<div class=\"example-wrapper\">
-    <h1>Formulaire d'intégration de livre</h1>
+\t<h1>Formulaire d'intégration de livre</h1>
+\t<div
+\t\tclass=\"flex\">
 
-<fieldset>
-{# {{form_start(form)}}
+\t\t{# {{form_start(form)}}
+\t\t\t\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t\t\t\t\t{{form_widget(form)}}
+\t\t\t\t\t\t\t\t\t\t\t\t{{form_errors(form)}}
+\t\t\t\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t\t\t\t\t{{form_end(form)}} #}
+\t\t<div id=\"Form\">
+\t\t\t<fieldset>
+\t\t\t\t{{form(form)}}
 
-{{form_widget(form)}}
-{{form_errors(form)}}
+\t\t\t\t\t{{form_errors(form)}}
 
-{{form_end(form)}} #}
-{{form(form)}}
-{{form_errors(form)}}
+\t\t\t\t</fieldset>
+\t\t\t</div>
 
-</fieldset>
-    
-{% endblock %}
-", "create/index.html.twig", "C:\\xampp\\htdocs\\CoursSymfony\\GestionLivreSymfonyProject\\GestionLivre\\gestionLivreSymfony\\templates\\create\\index.html.twig");
+
+\t\t{% endblock %}
+", "create/index.html.twig", "C:\\xampp\\htdocs\\CoursSymfony\\GestionLivreSymfonyProject\\GestionLivre\\GestionLivre\\gestionLivreSymfony\\templates\\create\\index.html.twig");
     }
 }

@@ -1,0 +1,69 @@
+body {
+  background-color: skyblue;
+}
+
+.navbar {
+  display: flex;
+
+  /* align-items: center; */
+  justify-content: flex-start;
+  text-align: center;
+  top: 0px;
+
+  border-bottom: 1px solid;
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+  text-decoration: none;
+  box-shadow: 10px 5px 5px rgb(80, 80, 80);
+}
+
+.navbar a {
+  font-family: "Crimson Pro", serif;
+  padding-right: 15px;
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  color: darkcyan;
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+
+}
+
+p {
+  font-size: 12px;
+}
+
+img {
+  width: 150px;
+  height: 100px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+
+}
+
+fieldset {
+  background-color: red;
+  width: 500px;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+
+li {
+  color: red;
+
+}

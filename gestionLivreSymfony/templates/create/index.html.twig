@@ -1,33 +1,40 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Ajout Livre{% endblock %}
-
+{% block title %}Ajout Livre
+{% endblock %}
+{% block stylesheets %}
+	<link href="{{ asset('styles/app.css') }}" type="text/css" rel="stylesheet">
+{% endblock %}
 {% block body %}
 
 
- <header>
-      <section>
-      
-        <nav class="navbar">
-          <a href="{{path('app_home')}}">Liste des Livres</a>
-          <a href="{{path('app_create')}}">Ajout Livre</a>
-        </nav>
-      </section>
-    </header>
+	<header>
+		<section>
+			<nav class="navbar">
+				<a href="{{path('app_home')}}">Liste des Livres</a>
+				<a href="{{path('app_create')}}">Ajout Livre</a>
+			</nav>
+		</section>
+	</header>
 
-<div class="example-wrapper">
-    <h1>Formulaire d'intégration de livre</h1>
+	<h1>Formulaire d'intégration de livre</h1>
+	<div
+		class="flex">
 
-<fieldset>
-{# {{form_start(form)}}
+		{# {{form_start(form)}}
+												
+												{{form_widget(form)}}
+												{{form_errors(form)}}
+												
+												{{form_end(form)}} #}
+		<div id="Form">
+			<fieldset>
+				{{form(form)}}
 
-{{form_widget(form)}}
-{{form_errors(form)}}
+					{{form_errors(form)}}
 
-{{form_end(form)}} #}
-{{form(form)}}
-{{form_errors(form)}}
+				</fieldset>
+			</div>
 
-</fieldset>
-    
-{% endblock %}
+
+		{% endblock %}
