@@ -15,6 +15,8 @@ return [
         '/_profiler/xdebug' => [[['_route' => '_profiler_xdebug', '_controller' => 'web_profiler.controller.profiler::xdebugAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/create' => [[['_route' => 'app_create', '_controller' => 'App\\Controller\\CreateController::index'], null, null, null, false, false, null]],
+        '/editor' => [[['_route' => 'app_editor_index', '_controller' => 'App\\Controller\\EditorController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/editor/new' => [[['_route' => 'app_editor_new', '_controller' => 'App\\Controller\\EditorController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/home' => [[['_route' => 'app_home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
@@ -38,6 +40,11 @@ return [
                     .')'
                 .')'
                 .'|/detail/book/([^/]++)(*:223)'
+                .'|/editor/([^/]++)(?'
+                    .'|(*:250)'
+                    .'|/edit(*:263)'
+                    .'|(*:271)'
+                .')'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -49,8 +56,11 @@ return [
         168 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         181 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         191 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        223 => [
-            [['_route' => 'app_detail_book', '_controller' => 'App\\Controller\\DetailBookController::index'], ['id'], null, null, false, true, null],
+        223 => [[['_route' => 'app_detail_book', '_controller' => 'App\\Controller\\DetailBookController::index'], ['id'], null, null, false, true, null]],
+        250 => [[['_route' => 'app_editor_show', '_controller' => 'App\\Controller\\EditorController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        263 => [[['_route' => 'app_editor_edit', '_controller' => 'App\\Controller\\EditorController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        271 => [
+            [['_route' => 'app_editor_delete', '_controller' => 'App\\Controller\\EditorController::delete'], ['id'], ['POST' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],
