@@ -123,6 +123,10 @@ class __TwigTemplate_a234be26373ba87da5cf6ff234f9831c extends Template
         // line 17
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_create");
         echo "\">Ajout Livre</a>
+\t\t\t\t<a href=\"";
+        // line 18
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
+        echo "\">Register</a>
 \t\t\t</nav>
 \t\t</section>
 \t</header>
@@ -131,49 +135,49 @@ class __TwigTemplate_a234be26373ba87da5cf6ff234f9831c extends Template
 \t\t<h1>Liste des livres</h1>
 
 \t\t";
-        // line 25
+        // line 26
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["allBooks"]) || array_key_exists("allBooks", $context) ? $context["allBooks"] : (function () { throw new RuntimeError('Variable "allBooks" does not exist.', 25, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["allBooks"]) || array_key_exists("allBooks", $context) ? $context["allBooks"] : (function () { throw new RuntimeError('Variable "allBooks" does not exist.', 26, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["book"]) {
-            // line 26
+            // line 27
             echo "\t\t\t<div>
 \t\t\t\t<a href=\"";
-            // line 27
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_detail_book", ["id" => twig_get_attribute($this->env, $this->source, $context["book"], "id", [], "any", false, false, false, 27)]), "html", null, true);
+            // line 28
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_detail_book", ["id" => twig_get_attribute($this->env, $this->source, $context["book"], "id", [], "any", false, false, false, 28)]), "html", null, true);
             echo "\">
 \t\t\t\t\t<p>ISBN :
 \t\t\t\t\t\t";
-            // line 29
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["book"], "ISBN", [], "any", false, false, false, 29), "html", null, true);
+            // line 30
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["book"], "ISBN", [], "any", false, false, false, 30), "html", null, true);
             echo "</p>
 \t\t\t\t\t<p>Title :";
-            // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["book"], "Titre", [], "any", false, false, false, 30), "html", null, true);
+            // line 31
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["book"], "Titre", [], "any", false, false, false, 31), "html", null, true);
             echo "</p>
 \t\t\t\t\t<p>Resume :
 \t\t\t\t\t\t";
-            // line 32
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["book"], "Resume", [], "any", false, false, false, 32), "html", null, true);
+            // line 33
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["book"], "Resume", [], "any", false, false, false, 33), "html", null, true);
             echo "</p>
 \t\t\t\t\t<p>Description :
 \t\t\t\t\t\t";
-            // line 34
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["book"], "Description", [], "any", false, false, false, 34), "html", null, true);
+            // line 35
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["book"], "Description", [], "any", false, false, false, 35), "html", null, true);
             echo "</p>
 \t\t\t\t\t<p>Price :
 \t\t\t\t\t\t";
-            // line 36
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["book"], "Price", [], "any", false, false, false, 36), "html", null, true);
+            // line 37
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["book"], "Price", [], "any", false, false, false, 37), "html", null, true);
             echo "</p>
 \t\t\t\t\t<p>Maison d'edition :
 \t\t\t\t\t\t";
-            // line 38
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["book"], "editor", [], "any", false, false, false, 38), "name", [], "any", false, false, false, 38), "html", null, true);
+            // line 39
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["book"], "editor", [], "any", false, false, false, 39), "name", [], "any", false, false, false, 39), "html", null, true);
             echo "</p>
 
 
 \t\t\t\t\t<img src=\"";
-            // line 41
+            // line 42
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/book.jpg"), "html", null, true);
             echo "\" alt=\"\">
 \t\t\t\t</div>
@@ -183,7 +187,7 @@ class __TwigTemplate_a234be26373ba87da5cf6ff234f9831c extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['book'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 45
+        // line 46
         echo "\t\t</div>
 \t";
         
@@ -215,7 +219,7 @@ class __TwigTemplate_a234be26373ba87da5cf6ff234f9831c extends Template
      */
     public function getDebugInfo()
     {
-        return array (  187 => 45,  177 => 41,  171 => 38,  166 => 36,  161 => 34,  156 => 32,  151 => 30,  147 => 29,  142 => 27,  139 => 26,  135 => 25,  124 => 17,  120 => 16,  113 => 11,  103 => 10,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
+        return array (  191 => 46,  181 => 42,  175 => 39,  170 => 37,  165 => 35,  160 => 33,  155 => 31,  151 => 30,  146 => 28,  143 => 27,  139 => 26,  128 => 18,  124 => 17,  120 => 16,  113 => 11,  103 => 10,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -237,6 +241,7 @@ class __TwigTemplate_a234be26373ba87da5cf6ff234f9831c extends Template
 \t\t\t<nav class=\"navbar\">
 \t\t\t\t<a href=\"{{path('app_home')}}\">Liste des Livres</a>
 \t\t\t\t<a href=\"{{path('app_create')}}\">Ajout Livre</a>
+\t\t\t\t<a href=\"{{path('app_register')}}\">Register</a>
 \t\t\t</nav>
 \t\t</section>
 \t</header>

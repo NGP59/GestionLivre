@@ -135,52 +135,56 @@ class __TwigTemplate_dce395f6fd5699b86fb5b191d97d2486 extends Template
         // line 29
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_create");
         echo "\">Ajout Livre</a>
+\t\t\t\t<a href=\"";
+        // line 30
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
+        echo "\">Register</a>
 \t\t\t</nav>
 \t\t</section>
 \t</header>
 
 \t<h1>Details du livre
 \t\t";
-        // line 35
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["book"]) || array_key_exists("book", $context) ? $context["book"] : (function () { throw new RuntimeError('Variable "book" does not exist.', 35, $this->source); })()), "Titre", [], "any", false, false, false, 35), "html", null, true);
+        // line 36
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["book"]) || array_key_exists("book", $context) ? $context["book"] : (function () { throw new RuntimeError('Variable "book" does not exist.', 36, $this->source); })()), "Titre", [], "any", false, false, false, 36), "html", null, true);
         echo "</h1>
 \t<div class=\"flex\">
 \t\t<div class=\"example-wrapper\">
 
 \t\t\t<p class=\"text\">ISBN :</p>
 \t\t\t<p>";
-        // line 40
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["book"]) || array_key_exists("book", $context) ? $context["book"] : (function () { throw new RuntimeError('Variable "book" does not exist.', 40, $this->source); })()), "getISBN", [], "any", false, false, false, 40), "html", null, true);
+        // line 41
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["book"]) || array_key_exists("book", $context) ? $context["book"] : (function () { throw new RuntimeError('Variable "book" does not exist.', 41, $this->source); })()), "getISBN", [], "any", false, false, false, 41), "html", null, true);
         echo "</p><br>
 \t\t\t<p class=\"text\">Titre :</p>
 \t\t\t<p>";
-        // line 42
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["book"]) || array_key_exists("book", $context) ? $context["book"] : (function () { throw new RuntimeError('Variable "book" does not exist.', 42, $this->source); })()), "Titre", [], "any", false, false, false, 42), "html", null, true);
+        // line 43
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["book"]) || array_key_exists("book", $context) ? $context["book"] : (function () { throw new RuntimeError('Variable "book" does not exist.', 43, $this->source); })()), "Titre", [], "any", false, false, false, 43), "html", null, true);
         echo "</p><br>
 \t\t\t<p class=\"text\">Resumé :</p>
 \t\t\t<p>";
-        // line 44
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["book"]) || array_key_exists("book", $context) ? $context["book"] : (function () { throw new RuntimeError('Variable "book" does not exist.', 44, $this->source); })()), "Resume", [], "any", false, false, false, 44), "html", null, true);
+        // line 45
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["book"]) || array_key_exists("book", $context) ? $context["book"] : (function () { throw new RuntimeError('Variable "book" does not exist.', 45, $this->source); })()), "Resume", [], "any", false, false, false, 45), "html", null, true);
         echo "</p><br>
 \t\t\t<p class=\"text\">Description :</p>
 \t\t\t<p>";
-        // line 46
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["book"]) || array_key_exists("book", $context) ? $context["book"] : (function () { throw new RuntimeError('Variable "book" does not exist.', 46, $this->source); })()), "Description", [], "any", false, false, false, 46), "html", null, true);
+        // line 47
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["book"]) || array_key_exists("book", $context) ? $context["book"] : (function () { throw new RuntimeError('Variable "book" does not exist.', 47, $this->source); })()), "Description", [], "any", false, false, false, 47), "html", null, true);
         echo "</p><br>
 \t\t\t<p class=\"text\">Prix :</p>
 \t\t\t<p>";
-        // line 48
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["book"]) || array_key_exists("book", $context) ? $context["book"] : (function () { throw new RuntimeError('Variable "book" does not exist.', 48, $this->source); })()), "price", [], "any", false, false, false, 48), "html", null, true);
+        // line 49
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["book"]) || array_key_exists("book", $context) ? $context["book"] : (function () { throw new RuntimeError('Variable "book" does not exist.', 49, $this->source); })()), "price", [], "any", false, false, false, 49), "html", null, true);
         echo "</p><br>
 \t\t\t<p class=\"text\">Maison d'édition :</p>
 \t\t\t<p>";
-        // line 50
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["book"]) || array_key_exists("book", $context) ? $context["book"] : (function () { throw new RuntimeError('Variable "book" does not exist.', 50, $this->source); })()), "editor", [], "any", false, false, false, 50), "name", [], "any", false, false, false, 50), "html", null, true);
+        // line 51
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["book"]) || array_key_exists("book", $context) ? $context["book"] : (function () { throw new RuntimeError('Variable "book" does not exist.', 51, $this->source); })()), "editor", [], "any", false, false, false, 51), "name", [], "any", false, false, false, 51), "html", null, true);
         echo "</p><br>
 \t\t\t<p class=\"text\">Adresse editeur :</p>
 \t\t\t<p>";
-        // line 52
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["book"]) || array_key_exists("book", $context) ? $context["book"] : (function () { throw new RuntimeError('Variable "book" does not exist.', 52, $this->source); })()), "editor", [], "any", false, false, false, 52), "adress", [], "any", false, false, false, 52), "html", null, true);
+        // line 53
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["book"]) || array_key_exists("book", $context) ? $context["book"] : (function () { throw new RuntimeError('Variable "book" does not exist.', 53, $this->source); })()), "editor", [], "any", false, false, false, 53), "adress", [], "any", false, false, false, 53), "html", null, true);
         echo "</p><br>
 \t\t</div>
 
@@ -215,7 +219,7 @@ class __TwigTemplate_dce395f6fd5699b86fb5b191d97d2486 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  183 => 52,  178 => 50,  173 => 48,  168 => 46,  163 => 44,  158 => 42,  153 => 40,  145 => 35,  136 => 29,  132 => 28,  113 => 11,  103 => 10,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
+        return array (  187 => 53,  182 => 51,  177 => 49,  172 => 47,  167 => 45,  162 => 43,  157 => 41,  149 => 36,  140 => 30,  136 => 29,  132 => 28,  113 => 11,  103 => 10,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -249,6 +253,7 @@ class __TwigTemplate_dce395f6fd5699b86fb5b191d97d2486 extends Template
 \t\t\t<nav class=\"navbar\">
 \t\t\t\t<a href=\"{{path('app_home')}}\">Liste des Livres</a>
 \t\t\t\t<a href=\"{{path('app_create')}}\">Ajout Livre</a>
+\t\t\t\t<a href=\"{{path('app_register')}}\">Register</a>
 \t\t\t</nav>
 \t\t</section>
 \t</header>

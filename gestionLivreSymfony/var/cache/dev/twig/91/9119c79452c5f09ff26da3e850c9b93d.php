@@ -120,6 +120,10 @@ class __TwigTemplate_435abd5666e2de3589c0291ad893caf6 extends Template
         // line 15
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_create");
         echo "\">Ajout Livre</a>
+\t\t\t\t<a href=\"";
+        // line 16
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
+        echo "\">Register</a>
 \t\t\t</nav>
 \t\t</section>
 \t</header>
@@ -129,17 +133,17 @@ class __TwigTemplate_435abd5666e2de3589c0291ad893caf6 extends Template
 \t\tclass=\"flex\">
 
 \t\t";
-        // line 30
+        // line 31
         echo "\t\t<div id=\"Form\">
 \t\t\t<fieldset>
 \t\t\t\t";
-        // line 32
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 32, $this->source); })()), 'form');
+        // line 33
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 33, $this->source); })()), 'form');
         echo "
 
 \t\t\t\t\t";
-        // line 34
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 34, $this->source); })()), 'errors');
+        // line 35
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 35, $this->source); })()), 'errors');
         echo "
 
 \t\t\t\t</fieldset>
@@ -176,7 +180,7 @@ class __TwigTemplate_435abd5666e2de3589c0291ad893caf6 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  142 => 34,  137 => 32,  133 => 30,  121 => 15,  117 => 14,  110 => 9,  100 => 8,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  146 => 35,  141 => 33,  137 => 31,  125 => 16,  121 => 15,  117 => 14,  110 => 9,  100 => 8,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -196,6 +200,7 @@ class __TwigTemplate_435abd5666e2de3589c0291ad893caf6 extends Template
 \t\t\t<nav class=\"navbar\">
 \t\t\t\t<a href=\"{{path('app_home')}}\">Liste des Livres</a>
 \t\t\t\t<a href=\"{{path('app_create')}}\">Ajout Livre</a>
+\t\t\t\t<a href=\"{{path('app_register')}}\">Register</a>
 \t\t\t</nav>
 \t\t</section>
 \t</header>
