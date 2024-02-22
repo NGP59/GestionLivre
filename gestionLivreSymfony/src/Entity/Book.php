@@ -28,6 +28,14 @@ class Book
     #[ORM\Column]
     private ?int $Price = null;
 
+    #[ORM\ManyToOne(inversedBy: 'books')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Editor $Editor = null;
+
+    #[ORM\ManyToOne(inversedBy: 'Book')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Author $author = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -89,6 +97,30 @@ class Book
     public function setPrice(int $Price): static
     {
         $this->Price = $Price;
+
+        return $this;
+    }
+
+    public function getEditor(): ?Editor
+    {
+        return $this->Editor;
+    }
+
+    public function setEditor(?Editor $Editor): static
+    {
+        $this->Editor = $Editor;
+
+        return $this;
+    }
+
+    public function getAuthor(): ?Author
+    {
+        return $this->author;
+    }
+
+    public function setAuthor(?Author $author): static
+    {
+        $this->author = $author;
 
         return $this;
     }

@@ -49,11 +49,13 @@ img {
 
 .flex {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 
 }
 
-#book {
+#fieldset {
+
   background-color: burlywood;
   width: 500px;
   height: 200px;

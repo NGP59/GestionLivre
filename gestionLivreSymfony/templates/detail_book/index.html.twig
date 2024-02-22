@@ -32,7 +32,7 @@
 	</header>
 
 	<h1>Details du livre
-		{{book.ISBN}}</h1>
+		{{book.Titre}}</h1>
 	<div class="flex">
 		<div class="example-wrapper">
 
@@ -46,6 +46,10 @@
 			<p>{{book.Description}}</p><br>
 			<p class="text">Prix :</p>
 			<p>{{book.price}}</p><br>
+			<p class="text">Maison d'édition :</p>
+			<p>{{book.editor.name}}</p><br>
+			<p class="text">Adresse editeur :</p>
+			<p>{{book.editor.adress}}</p><br>
 		</div>
 
 	</div>

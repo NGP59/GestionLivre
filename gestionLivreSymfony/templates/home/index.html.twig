@@ -34,8 +34,11 @@
 						{{ book.Description}}</p>
 					<p>Price :
 						{{ book.Price}}</p>
+					<p>Maison d'edition :
+						{{ book.editor.name}}</p>
 
-<img src="{{ asset('img/book.jpg') }}" alt="">
+
+					<img src="{{ asset('img/book.jpg') }}" alt="">
 				</div>
 				<hr>
 			{% endfor %}

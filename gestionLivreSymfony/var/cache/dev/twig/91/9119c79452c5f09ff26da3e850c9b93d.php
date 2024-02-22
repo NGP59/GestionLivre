@@ -87,10 +87,7 @@ class __TwigTemplate_435abd5666e2de3589c0291ad893caf6 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 6
-        echo "\t<link href=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("styles/app.css"), "html", null, true);
-        echo "\" type=\"text/css\" rel=\"stylesheet\">
-";
+        echo "\t";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -179,7 +176,7 @@ class __TwigTemplate_435abd5666e2de3589c0291ad893caf6 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  145 => 34,  140 => 32,  136 => 30,  124 => 15,  120 => 14,  113 => 9,  103 => 8,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  142 => 34,  137 => 32,  133 => 30,  121 => 15,  117 => 14,  110 => 9,  100 => 8,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -189,7 +186,7 @@ class __TwigTemplate_435abd5666e2de3589c0291ad893caf6 extends Template
 {% block title %}Ajout Livre
 {% endblock %}
 {% block stylesheets %}
-\t<link href=\"{{ asset('styles/app.css') }}\" type=\"text/css\" rel=\"stylesheet\">
+\t{# <link href=\"{{ asset('styles/app.css') }}\" type=\"text/css\" rel=\"stylesheet\"> #}
 {% endblock %}
 {% block body %}
 

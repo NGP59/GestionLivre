@@ -165,9 +165,15 @@ class __TwigTemplate_a234be26373ba87da5cf6ff234f9831c extends Template
             // line 36
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["book"], "Price", [], "any", false, false, false, 36), "html", null, true);
             echo "</p>
-
-<img src=\"";
+\t\t\t\t\t<p>Maison d'edition :
+\t\t\t\t\t\t";
             // line 38
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["book"], "editor", [], "any", false, false, false, 38), "name", [], "any", false, false, false, 38), "html", null, true);
+            echo "</p>
+
+
+\t\t\t\t\t<img src=\"";
+            // line 41
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/book.jpg"), "html", null, true);
             echo "\" alt=\"\">
 \t\t\t\t</div>
@@ -177,7 +183,7 @@ class __TwigTemplate_a234be26373ba87da5cf6ff234f9831c extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['book'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 42
+        // line 45
         echo "\t\t</div>
 \t";
         
@@ -209,7 +215,7 @@ class __TwigTemplate_a234be26373ba87da5cf6ff234f9831c extends Template
      */
     public function getDebugInfo()
     {
-        return array (  181 => 42,  171 => 38,  166 => 36,  161 => 34,  156 => 32,  151 => 30,  147 => 29,  142 => 27,  139 => 26,  135 => 25,  124 => 17,  120 => 16,  113 => 11,  103 => 10,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
+        return array (  187 => 45,  177 => 41,  171 => 38,  166 => 36,  161 => 34,  156 => 32,  151 => 30,  147 => 29,  142 => 27,  139 => 26,  135 => 25,  124 => 17,  120 => 16,  113 => 11,  103 => 10,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -250,8 +256,11 @@ class __TwigTemplate_a234be26373ba87da5cf6ff234f9831c extends Template
 \t\t\t\t\t\t{{ book.Description}}</p>
 \t\t\t\t\t<p>Price :
 \t\t\t\t\t\t{{ book.Price}}</p>
+\t\t\t\t\t<p>Maison d'edition :
+\t\t\t\t\t\t{{ book.editor.name}}</p>
 
-<img src=\"{{ asset('img/book.jpg') }}\" alt=\"\">
+
+\t\t\t\t\t<img src=\"{{ asset('img/book.jpg') }}\" alt=\"\">
 \t\t\t\t</div>
 \t\t\t\t<hr>
 \t\t\t{% endfor %}

@@ -142,7 +142,7 @@ class __TwigTemplate_dce395f6fd5699b86fb5b191d97d2486 extends Template
 \t<h1>Details du livre
 \t\t";
         // line 35
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["book"]) || array_key_exists("book", $context) ? $context["book"] : (function () { throw new RuntimeError('Variable "book" does not exist.', 35, $this->source); })()), "ISBN", [], "any", false, false, false, 35), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["book"]) || array_key_exists("book", $context) ? $context["book"] : (function () { throw new RuntimeError('Variable "book" does not exist.', 35, $this->source); })()), "Titre", [], "any", false, false, false, 35), "html", null, true);
         echo "</h1>
 \t<div class=\"flex\">
 \t\t<div class=\"example-wrapper\">
@@ -171,6 +171,16 @@ class __TwigTemplate_dce395f6fd5699b86fb5b191d97d2486 extends Template
 \t\t\t<p>";
         // line 48
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["book"]) || array_key_exists("book", $context) ? $context["book"] : (function () { throw new RuntimeError('Variable "book" does not exist.', 48, $this->source); })()), "price", [], "any", false, false, false, 48), "html", null, true);
+        echo "</p><br>
+\t\t\t<p class=\"text\">Maison d'édition :</p>
+\t\t\t<p>";
+        // line 50
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["book"]) || array_key_exists("book", $context) ? $context["book"] : (function () { throw new RuntimeError('Variable "book" does not exist.', 50, $this->source); })()), "editor", [], "any", false, false, false, 50), "name", [], "any", false, false, false, 50), "html", null, true);
+        echo "</p><br>
+\t\t\t<p class=\"text\">Adresse editeur :</p>
+\t\t\t<p>";
+        // line 52
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["book"]) || array_key_exists("book", $context) ? $context["book"] : (function () { throw new RuntimeError('Variable "book" does not exist.', 52, $this->source); })()), "editor", [], "any", false, false, false, 52), "adress", [], "any", false, false, false, 52), "html", null, true);
         echo "</p><br>
 \t\t</div>
 
@@ -205,7 +215,7 @@ class __TwigTemplate_dce395f6fd5699b86fb5b191d97d2486 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  173 => 48,  168 => 46,  163 => 44,  158 => 42,  153 => 40,  145 => 35,  136 => 29,  132 => 28,  113 => 11,  103 => 10,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
+        return array (  183 => 52,  178 => 50,  173 => 48,  168 => 46,  163 => 44,  158 => 42,  153 => 40,  145 => 35,  136 => 29,  132 => 28,  113 => 11,  103 => 10,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -244,7 +254,7 @@ class __TwigTemplate_dce395f6fd5699b86fb5b191d97d2486 extends Template
 \t</header>
 
 \t<h1>Details du livre
-\t\t{{book.ISBN}}</h1>
+\t\t{{book.Titre}}</h1>
 \t<div class=\"flex\">
 \t\t<div class=\"example-wrapper\">
 
@@ -258,6 +268,10 @@ class __TwigTemplate_dce395f6fd5699b86fb5b191d97d2486 extends Template
 \t\t\t<p>{{book.Description}}</p><br>
 \t\t\t<p class=\"text\">Prix :</p>
 \t\t\t<p>{{book.price}}</p><br>
+\t\t\t<p class=\"text\">Maison d'édition :</p>
+\t\t\t<p>{{book.editor.name}}</p><br>
+\t\t\t<p class=\"text\">Adresse editeur :</p>
+\t\t\t<p>{{book.editor.adress}}</p><br>
 \t\t</div>
 
 \t</div>

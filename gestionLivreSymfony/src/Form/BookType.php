@@ -2,7 +2,13 @@
 
 namespace App\Form;
 
+use App\Entity\Author;
 use App\Entity\Book;
+use App\Entity\Editor;
+use App\Repository\AuthorRepository;
+use App\Repository\BookRepository;
+use Doctrine\DBAL\Query\QueryBuilder;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -69,6 +75,25 @@ class BookType extends AbstractType
 
                 ]
             ])
+
+            ->add('Author', EntityType::class, [
+                'class'=> Author::class,
+                'choice_label' => function ($author)
+                {
+                    return $author->getFullName();
+                }
+            ])
+
+
+            ->add('Editor' , EntityType::class,
+            [
+                'class' => Editor::class,
+                'choice_label' => function ($editor)
+                {
+                    return $editor->getName();
+                }
+            ])
+          
             ->add('Ajout', SubmitType::class);
     }
 
